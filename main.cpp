@@ -26,7 +26,7 @@ int main(){
     mfcc_block( samples,  SAMPLE_COUNT,  feature_vector);
 
     // generate data.txt
-    FILE *file = fopen("./MFCC.txt", "wt");
+    FILE *file = fopen("../MFCC.txt", "wt");
     for (int i = 0; i < number_feature_vectors; i++){
         for (int j = 0; j < 3 * number_coefficients; j++){
             fprintf(file, "%lf ", feature_vector[i][j]);
